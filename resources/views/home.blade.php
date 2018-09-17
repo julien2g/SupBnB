@@ -48,7 +48,7 @@
             @foreach($homes as $home )
                 <!-- Blog Post -->
                     <div class="card mb-4">
-
+<img src="{{url('/storage/a.png')}}">
                         <div class="card-body">
                             <h2 class="card-title">{{$home->title}}</h2>
                             <h2 class="card-title">{{$home->type}}</h2>

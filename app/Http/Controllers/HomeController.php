@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Booking;
 use App\Home;
 use App\EventModel;
+use App\Img;
 use MaddHatter\LaravelFullcalendar\Calendar;
 use MaddHatter\LaravelFullcalendar\Event;
 use Illuminate\Http\Request;
@@ -77,8 +78,7 @@ class HomeController extends Controller
     public function sortHome($type, $data)
     {
         $homes = Home::where($type, '=', $data)->get(); //Fetch home by data
-        //return view('ticket/showTicket')->with('ticket', $ticket)->with('messages', $messages);
-        //print_r($homes); die();
+
         return view('home/listHomes')->with('homes', $homes)->with('data', $data);
     }
 
@@ -121,8 +121,18 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-$path = $request->file('image')->store('/');
-echo $path;
+        $path = $request->file('image')->store('/public');
+        $params = $request->except(['_token']);  // Fetch all Forms parmas witout _token
+        $img = new Img();
+        $img->slug_home = $params['slug'];
+        $img->title = $path;
+        $img->save();
+        //echo asset('/storage/a.png');
+
+
+        //
+        //echo $path;
+        //echo $img;
     }
 
 }

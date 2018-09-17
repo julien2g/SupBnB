@@ -48,8 +48,8 @@
 
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h2 class="card-title float-right">{{$owners_r[$key]->name}}'s phone : {{$owners_r[$key]->phone}} </h2>
-                            <h2 class="card-title">{{$owners_r[$key]->name}} want to book {{$homes_r[$key]->title}} |</h2>
+                            <h2 class="card-title float-right">| {{$owners_r[$key]->name}}'s phone : {{$owners_r[$key]->phone}} </h2>
+                            <h2 class="card-title">{{$owners_r[$key]->name}} want to book {{$homes_r[$key]->title}}</h2>
                             <h4 class="card-title">{{$homes_r[$key]->address}}</h4>
 
                             <p class="card-text">Start : {{$reservation->start}}</p>
