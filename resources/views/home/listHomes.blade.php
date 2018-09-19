@@ -15,7 +15,11 @@
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                      @foreach($imgs as $img )
+                      @if($home->slug == $img->slug_home)
+                       <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset($img->title) }}" alt="">
+                        @endif
+                    @endforeach
                     </a>
                 </div>
                 <div class="col-md-5">

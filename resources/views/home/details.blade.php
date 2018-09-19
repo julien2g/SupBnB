@@ -60,7 +60,7 @@
                 </ol>
 
                 <div class="card mt-4">
-                    <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+                    <img class="card-img-top img-fluid" src="{{ asset($img->title) }}" alt="">
                     <div class="card-body">
                         <h3 class="card-title">Location : {{$home->address}}</h3>
                         <h4>Type : {{$home->type_bed}} in {{$home->type}}</h4>
@@ -75,7 +75,7 @@
                     Home pictures
                 </div>
                 <div class="card-body">
-                    <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+                    <img class="card-img-top img-fluid" src="{{ asset($img->title) }}" alt="">
                     <hr>
                     @if($home->owner ==  Auth::user()->id)
                         <form method="post" action="{{route('upload')}}" enctype="multipart/form-data">

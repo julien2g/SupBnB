@@ -48,7 +48,11 @@
             @foreach($homes as $home )
                 <!-- Blog Post -->
                     <div class="card mb-4">
-<img src="{{url('/storage/a.png')}}">
+                      @foreach($imgs as $img )
+                      @if($home->slug == $img->slug_home)
+                       <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset($img->title) }}" alt="">
+                        @endif
+                    @endforeach
                         <div class="card-body">
                             <h2 class="card-title">{{$home->title}}</h2>
                             <h2 class="card-title">{{$home->type}}</h2>
