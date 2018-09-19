@@ -133,6 +133,7 @@ class HomeController extends Controller
         $img->save();
         //echo asset('/storage/a.png');
 
+return redirect()->route('/')->with('success', 'Your picture was added');
 
         //
         //echo $path;
