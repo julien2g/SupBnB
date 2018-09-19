@@ -75,7 +75,11 @@
                     Home pictures
                 </div>
                 <div class="card-body">
-                    <img class="card-img-top img-fluid" src="{{ asset($img->title) }}" alt="">
+                  @foreach($imgs as $img2 )
+                  @if($home->slug == $img2->slug_home)
+                   <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset($img2->title) }}" alt="">
+                    @endif
+                @endforeach
                     <hr>
                     @if($home->owner ==  Auth::user()->id)
                         <form method="post" action="{{route('upload')}}" enctype="multipart/form-data">

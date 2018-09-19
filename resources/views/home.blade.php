@@ -48,9 +48,11 @@
             @foreach($homes as $home )
                 <!-- Blog Post -->
                     <div class="card mb-4">
+                      @php ($variable = 'test')
                       @foreach($imgs as $img )
-                      @if($home->slug == $img->slug_home)
+                      @if($home->slug == $img->slug_home && $variable == 'test')
                        <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset($img->title) }}" alt="">
+                       @php ($variable = 't')
                         @endif
                     @endforeach
                         <div class="card-body">

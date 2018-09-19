@@ -15,9 +15,11 @@
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
+                      @php ($variable = 'test')
                       @foreach($imgs as $img )
-                      @if($home->slug == $img->slug_home)
+                      @if($home->slug == $img->slug_home && $variable == 'test')
                        <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset($img->title) }}" alt="">
+                       @php ($variable = 't')
                         @endif
                     @endforeach
                     </a>

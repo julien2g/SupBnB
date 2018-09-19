@@ -72,9 +72,10 @@ class HomeController extends Controller
     {
         $home = Home::where('slug', '=', $slug)->first(); //Fetch $home by slug
         $img = Img::where('slug_home', '=', $slug)->first();
+        $imgs = Img::where('slug_home', '=', $slug)->get();
 
         $calendar = $this->getbooking($slug);
-        return view('home/details', compact('calendar'))->with('home', $home)->with('img', $img);
+        return view('home/details', compact('calendar'))->with('home', $home)->with('img', $img)->with('imgs', $imgs);
     }
 
     public function sortHome($type, $data)
