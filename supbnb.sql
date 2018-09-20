@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 07, 2018 at 11:52 AM
+-- Generation Time: Sep 20, 2018 at 10:03 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -40,15 +40,6 @@ CREATE TABLE `event_models` (
   `id_owner` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `event_models`
---
-
-INSERT INTO `event_models` (`id`, `title`, `all_day`, `start`, `end`, `slug_home`, `accepted`, `id_booker`, `updated_at`, `created_at`, `id_owner`) VALUES
-(13, 'Juliennnnn', 1, '2018-08-02 00:00:00', '2018-09-02 00:00:00', 'r', 1, 1, '2018-08-05 20:56:10', '2018-08-05 14:01:46', 2),
-(15, 'sami', 1, '2018-08-02 00:00:00', '2018-09-02 00:00:00', 'u', 1, 2, '2018-08-05 20:56:12', '2018-08-05 14:01:46', 1),
-(16, 'Julien', 1, '2018-09-09 00:00:00', '2018-09-16 00:00:00', 'r', 0, 1, '2018-08-05 19:05:07', '2018-08-05 19:05:07', 2);
-
 -- --------------------------------------------------------
 
 --
@@ -70,13 +61,19 @@ CREATE TABLE `homes` (
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `homes`
+-- Table structure for table `imgs`
 --
 
-INSERT INTO `homes` (`id`, `title`, `owner`, `type`, `address`, `content`, `type_bed`, `created_at`, `updated_at`, `country`, `city`, `slug`) VALUES
-(1, 'your place', 2, 'House party', '荣都嘉园5号楼1门1705', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ex auctor ex mattis suscipit. In maximus bibendum aliquam. Aenean ac lacus urna. Aliquam erat volutpat. Morbi id congue urna. Integer malesuada, lacus id porttitor ornare, eros velit bibendum nibh, eu condimentum nisi quam sed felis. Nulla non pretium dolor, at consectetur lectus. Vivamus sit amet est sit amet purus feugiat tincidunt. Sed scelerisque sit amet felis et porttitor. Nullam mollis nec enim vitae auctor. Mauris varius sit amet velit vel scelerisque. Donec vulputate risus lorem. Proin commodo augue sapien, ut pulvinar diam rhoncus et. \r\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ex auctor ex mattis suscipit. In maximus bibendum aliquam. Aenean ac lacus urna. Aliquam erat volutpat. Morbi id congue urna. Integer malesuada, lacus id porttitor ornare, eros velit bibendum nibh, eu condimentum nisi quam sed felis. Nulla non pretium dolor, at consectetur lectus. Vivamus sit amet est sit amet purus feugiat tincidunt. Sed scelerisque sit amet felis et porttitor. Nullam mollis nec enim vitae auctor. Mauris varius sit amet velit vel scelerisque. Donec vulputate risus lorem. Proin commodo augue sapien, ut pulvinar diam rhoncus et. \r\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ex auctor ex mattis suscipit. In maximus bibendum aliquam. Aenean ac lacus urna. Aliquam erat volutpat. Morbi id congue urna. Integer malesuada, lacus id porttitor ornare, eros velit bibendum nibh, eu condimentum nisi quam sed felis. Nulla non pretium dolor, at consectetur lectus. Vivamus sit amet est sit amet purus feugiat tincidunt. Sed scelerisque sit amet felis et porttitor. Nullam mollis nec enim vitae auctor. Mauris varius sit amet velit vel scelerisque. Donec vulputate risus lorem. Proin commodo augue sapien, ut pulvinar diam rhoncus et. \r\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ex auctor ex mattis suscipit. In maximus bibendum aliquam. Aenean ac lacus urna. Aliquam erat volutpat. Morbi id congue urna. Integer malesuada, lacus id porttitor ornare, eros velit bibendum nibh, eu condimentum nisi quam sed felis. Nulla non pretium dolor, at consectetur lectus. Vivamus sit amet est sit amet purus feugiat tincidunt. Sed scelerisque sit amet felis et porttitor. Nullam mollis nec enim vitae auctor. Mauris varius sit amet velit vel scelerisque. Donec vulputate risus lorem. Proin commodo augue sapien, ut pulvinar diam rhoncus et. \r\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ex auctor ex mattis suscipit. In maximus bibendum aliquam. Aenean ac lacus urna. Aliquam erat volutpat. Morbi id congue urna. Integer malesuada, lacus id porttitor ornare, eros velit bibendum nibh, eu condimentum nisi quam sed felis. Nulla non pretium dolor, at consectetur lectus. Vivamus sit amet est sit amet purus feugiat tincidunt. Sed scelerisque sit amet felis et porttitor. Nullam mollis nec enim vitae auctor. Mauris varius sit amet velit vel scelerisque. Donec vulputate risus lorem. Proin commodo augue sapien, ut pulvinar diam rhoncus et.', 'King size', NULL, '2018-08-05 10:44:46', 'China', '天津', 'r'),
-(2, 'My place', 1, 'House party', '荣都嘉园5号楼1门1705', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ex auctor ex mattis suscipit. In maximus bibendum aliquam. Aenean ac lacus urna. Aliquam erat volutpat. Morbi id congue urna. Integer malesuada, lacus id porttitor ornare, eros velit bibendum nibh, eu condimentum nisi quam sed felis. Nulla non pretium dolor, at consectetur lectus. Vivamus sit amet est sit amet purus feugiat tincidunt. Sed scelerisque sit amet felis et porttitor. Nullam mollis nec enim vitae auctor. Mauris varius sit amet velit vel scelerisque. Donec vulputate risus lorem. Proin commodo augue sapien, ut pulvinar diam rhoncus et. ', 'King size', NULL, NULL, 'France', 'Bouillargues ', 'u');
+CREATE TABLE `imgs` (
+  `identifiant` int(11) NOT NULL,
+  `slug_home` text NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -110,6 +107,13 @@ CREATE TABLE `password_resets` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('kartori@yahoo.fr', '$2y$10$5jLYJQv5/JN1RQW41y2B7umnGmmvHot.kbqtYLqILeYjfANuSgK4u', '2018-08-29 07:05:02');
 
 -- --------------------------------------------------------
 
@@ -153,6 +157,12 @@ ALTER TABLE `homes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `imgs`
+--
+ALTER TABLE `imgs`
+  ADD PRIMARY KEY (`identifiant`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -172,13 +182,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `event_models`
 --
 ALTER TABLE `event_models`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `homes`
 --
 ALTER TABLE `homes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `imgs`
+--
+ALTER TABLE `imgs`
+  MODIFY `identifiant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `migrations`

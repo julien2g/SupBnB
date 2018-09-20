@@ -73,7 +73,6 @@
                         <input type="file" name="image" class="form-control">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <input type="hidden" name="slug" value="{{$home->slug}}">
-                        <input type="hidden" name="slug" value="{{$home->slug}}">
                     </div>
                 </div>
 

@@ -58,9 +58,8 @@
                         </li>
                     @endif
                 </ol>
-
                 <div class="card mt-4">
-                    <img class="card-img-top img-fluid" src="{{ asset($img->title) }}" alt="">
+                  <img class="card-img-top img-fluid" src="{{ asset($img->title) }}" alt="Pics profile">
                     <div class="card-body">
                         <h3 class="card-title">Location : {{$home->address}}</h3>
                         <h4>Type : {{$home->type_bed}} in {{$home->type}}</h4>
@@ -82,23 +81,24 @@
                 @endforeach
                     <hr>
                     @if($home->owner ==  Auth::user()->id)
-                        <form method="post" action="{{route('upload')}}" enctype="multipart/form-data">
-                            <div class="row">
-                                <div class="col-md-4"></div>
-                                <div class="form-group col-md-4">
-                                    <input type="file" name="image" class="form-control">
-                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4"></div>
-                                <div class="form-group col-md-4">
-                                    <button type="submit" class="btn btn-success" style="margin-top:10px">Upload Image
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                              <form method="post" action="{{route('upload')}}" enctype="multipart/form-data">
+                                  <div class="row">
+                                      <div class="col-md-4"></div>
+                                      <div class="form-group col-md-4">
+                                          <input type="file" name="image" class="form-control">
+                                          <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                          <input type="hidden" name="slug" value="{{$home->slug}}">
+                                      </div>
+                                  </div>
 
+                                  <div class="row">
+                                      <div class="col-md-4"></div>
+                                      <div class="form-group col-md-4">
+                                          <button type="submit" class="btn btn-success" style="margin-top:10px">Upload Image</button>
+                                      </div>
+                                  </div>
+
+                              </form>
                     @endif
                 </div>
                 <!-- /.card -->

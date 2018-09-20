@@ -25,7 +25,7 @@ class BookController extends Controller
         $booking->id_owner = $params['id_owner'];
 
         $booking->save(); // Insert BDD
-        return Redirect::back();
+        return redirect()->back();
     }
 
     public function bookingFetch()
@@ -63,7 +63,7 @@ class BookController extends Controller
         $booking = EventModel::find($id);
         $booking->accepted = 1;
         $booking->save();
-        return Redirect::back();
+        return redirect()->back();
 
     }
 
@@ -72,7 +72,7 @@ class BookController extends Controller
         $booking = EventModel::find($id);
         $booking->accepted = 2;
         $booking->save();
-        return Redirect::back();
+        return redirect()->back();
 
     }
 
