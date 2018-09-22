@@ -25,7 +25,7 @@
 
     <!-- Page Heading/Breadcrumbs -->
         <h1 class="mt-4 mb-3">SupBnB
-            <small>Your sweet home anywere</small>
+            <small>Your sweet home everywhere</small>
         </h1>
 
         <ol class="breadcrumb">

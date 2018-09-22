@@ -3,18 +3,12 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 20, 2018 at 10:03 AM
+-- Generation Time: Sep 22, 2018 at 10:26 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `supbnb`
@@ -128,17 +122,17 @@ CREATE TABLE `users` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `phone` int(11) NOT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `phone`) VALUES
-(1, 'Julien', 'kartori@yahoo.fr', '$2y$10$5YOgXVF6ONBXd96AVnBDMu/tohqpI3yb5HtpKwTpnCqZFq/NNUWca', 'wXZ6Icma03HdGuFJWAbGVQKGcbdlCbtokZssNuJxrYMqjDhP4ItLIVnNxOoV', '2018-06-14 08:03:47', '2018-06-14 08:03:47', 16666666),
-(2, 'Sami', 'sami.menouar@gmail.com', '$2y$10$QDWi4XjmQZUesHwEKaqKnOEZtlhwdA5N6FVj01dbijIn1bYMtxK8q', NULL, '2018-06-20 22:42:50', '2018-06-20 22:42:50', 66666);
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Julien', 'kartori@yahoo.fr', '$2y$10$5YOgXVF6ONBXd96AVnBDMu/tohqpI3yb5HtpKwTpnCqZFq/NNUWca', 'wXZ6Icma03HdGuFJWAbGVQKGcbdlCbtokZssNuJxrYMqjDhP4ItLIVnNxOoV', '2018-06-14 08:03:47', '2018-06-14 08:03:47'),
+(2, 'Sami', 'sami.menouar@gmail.com', '$2y$10$QDWi4XjmQZUesHwEKaqKnOEZtlhwdA5N6FVj01dbijIn1bYMtxK8q', NULL, '2018-06-20 22:42:50', '2018-06-20 22:42:50'),
+(3, 'trez', 'kartori@yahoo.frgg', '$2y$10$iN8Rq4ggAgy6WzBigDbz2.3UGF0x6vAe8sUhWXd0WPTLw3c6n/woy', NULL, '2018-09-21 18:25:45', '2018-09-21 18:25:45');
 
 --
 -- Indexes for dumped tables
@@ -182,19 +176,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `event_models`
 --
 ALTER TABLE `event_models`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `homes`
 --
 ALTER TABLE `homes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `imgs`
 --
 ALTER TABLE `imgs`
-  MODIFY `identifiant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `identifiant` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -206,8 +200,4 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
