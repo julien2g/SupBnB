@@ -113,12 +113,14 @@ class HomeController extends Controller
             $home->type = $params['type'];
             $home->type_bed = $params['type_bed'];
             $home->content = $params['content'];
-            $home->slug = Str::slug($params['title'] . $date->format('dmYhis'));
 
             $home->save(); // Update ticket by slug
 
+            $img = Img::where('slug_home', '=', $slug)->first();
+            $imgs = Img::where('slug_home', '=', $slug)->get();
+
             $calendar = $this->getbooking($slug);
-            return view('home/details', compact('calendar'))->with('home', $home);
+            return view('home/details', compact('calendar'))->with('home', $home)->with('img', $img)->with('imgs', $imgs);
         }
         return view('home/add')->with('home', $home);
     }
